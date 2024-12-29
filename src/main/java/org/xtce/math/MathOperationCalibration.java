@@ -52,8 +52,7 @@ public class MathOperationCalibration implements Calibration {
     /** Calibration of values using MathOperationCalibrator has some limited
      * support for common numeric values and operators.
      *
-     * At present, the ParameterInstanceRefOperand is not yet supported.  Some
-     * operators are not yet implemented, but likely will be supported in the
+     * Some operators are not yet implemented, but likely will be supported in the
      * future.  The following list contains the unsupported operators that are
      * specified in XTCE 1.1:
      *
@@ -109,7 +108,7 @@ public class MathOperationCalibration implements Calibration {
 
                     applyOperator( (String)term, stack );
 
-                // XTCE element ParameterInstanceRefOperand (add later)
+                // XTCE element ParameterInstanceRefOperand
                 } else if ( term instanceof ParameterInstanceRefType ) {
         
                     stack.push(new BigDecimal(((ParameterInstanceRefType) term).getInstance()));
